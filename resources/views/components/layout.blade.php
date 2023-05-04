@@ -20,7 +20,7 @@
 
 @vite(['resources/js/app.js', 'resources/css/app.css'])
 
-    <title>Gaming blog</title>
+    <title>Gaming DataBase</title>
 </head>
 <body>
 

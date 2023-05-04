@@ -2,12 +2,19 @@
     font-family: 'roboto', arial, helvetica;
 }
 .bg-teal{
-    background-color: teal ;
+    background-color: rgb(16, 114, 167) ;
 }
 
 .customCard{
-    border: 3px solid rgb(33,37,41);
+   border: 3px solid rgb(33,37,41);
 
+}
+.customCard:hover{
+    transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   -o-transform: scale(1.1);
 }
 .imgCustom{
     border-radius: 15%;
@@ -15,4 +22,23 @@
     -moz-border-radius: 15%;
     -ms-border-radius: 15%;
     -o-border-radius: 15%;
+}
+.chi-siamoImg{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+.gameImg{
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
 }

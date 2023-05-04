@@ -17,7 +17,7 @@
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #55acee;"
-          href="#!"
+          href="http://www.twitter.com"
           role="button"
           ><i class="fab fa-twitter"></i
         ></a>
@@ -44,14 +44,14 @@
         <a
         class="btn text-white btn-floating m-1"
         style="background-color: #0082ca;"
-        href="#!"
+        href="www.linkedin.com"
         role="button"
         ><i class="fab fa-linkedin-in"></i></a>
         <!-- Github -->
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #333333;"
-          href="#!"
+          href="https://github.com/Hackademy-72/Laravel_05_Andrea_Salaris"
           role="button"
           ><i class="fab fa-github"></i
         ></a>

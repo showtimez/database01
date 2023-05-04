@@ -18,7 +18,7 @@
 <div class="container my-5 shadow">
     <div class="row ">
         <div class="col-12 d-flex justify-content-center">
-            <img class="img-fluid py-4 imgCustom" src="/media/server.jpg" alt="...">
+            <img class="img-fluid py-4 imgCustom" src="https://www.pngmart.com/files/11/Internet-Network-PNG-Transparent-HD-Photo.png" alt="...">
         </div>
     </div>
 </div>
