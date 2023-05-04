@@ -10,13 +10,20 @@
             <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('game.create') }}">Inserisci un Videogame</a>
+            <a class="nav-link" href="{{ route('game.create') }}">Game DB add</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('game.index') }}">Lista dei Videogames</a>
+            <a class="nav-link" href="{{ route('game.index') }}">Games DataBase</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('chi-siamo.index') }}">Chi siamo</a>
+            <a class="nav-link" href="{{ route('game.indexSlider') }}">Games DataBase Slider</a>
+          </li>
+          <li class="nav-item">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('chi-siamo.contacts') }}">Contacts</a>
+              </li>
+              <li class="nav-item">
+            <a class="nav-link" href="{{ route('chi-siamo.index') }}">About us</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

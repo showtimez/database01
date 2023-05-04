@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PartnerController;
 
 /*
@@ -22,3 +23,8 @@ Route::get('/game/create', [GameController::class, 'create'])->name('game.create
 Route::post('game/store', [GameController::class, 'store'])->name('game.store');
 Route::get('/game/index', [GameController::class, 'index'])->name('game.index');
 Route::get('/chi-siamo/chi-siamo', [PartnerController::class, 'index'])->name('chi-siamo.index');
+Route::get('/game/indexSlider', [GameController::class, 'indexSlider'])->name('game.indexSlider');
+
+Route::get('/chi-siamo/contacts', [ContactController::class, 'contacts'])->name('chi-siamo.contacts');
+Route::post('/chi-siamo/contacts/save', [ContactController::class, 'save'])->name('chi-siamo.contacts.save');
+Route::post('/chi-siamo/contacts/send', [ContactController::class, 'send'])->name('chi-siamo.contacts.send');

@@ -18,8 +18,13 @@ class GameController extends Controller
     ]);
     return redirect(route('homepage'))->with('gameCreated', "Hai inserito con successo un videogame");
  }
+
  public function index(){
     $games = Game::all();
     return view('game.index', compact('games'));
+ }
+ public function indexSlider(){
+    $games = Game::all();
+return view('game.indexSlider', compact('games'));
  }
 }
