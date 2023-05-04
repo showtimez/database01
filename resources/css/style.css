@@ -7,5 +7,12 @@
 
 .customCard{
     border: 3px solid rgb(33,37,41);
-    max-width: fit-content;
+
+}
+.imgCustom{
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
 }
