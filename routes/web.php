@@ -27,4 +27,3 @@ Route::get('/game/indexSlider', [GameController::class, 'indexSlider'])->name('g
 
 Route::get('/chi-siamo/contacts', [ContactController::class, 'contacts'])->name('chi-siamo.contacts');
 Route::post('/chi-siamo/contacts/save', [ContactController::class, 'save'])->name('chi-siamo.contacts.save');
-Route::post('/chi-siamo/contacts/send', [ContactController::class, 'send'])->name('chi-siamo.contacts.send');
