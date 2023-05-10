@@ -1,4 +1,5 @@
-<x-layout header="Inserisci un videogame ">
+<x-layout>
+    <x-header header="Inserisci un videogame"></x-header>
 
     <nav class="navbar navbar-expand-lg bg-dark p-3 navbar-dark">
         <div class="container-fluid">

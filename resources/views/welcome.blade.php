@@ -1,5 +1,5 @@
-<x-layout header="Gaming DataBase">
-
+<x-layout>
+    <x-header header="Gaming DataBase." />
 <nav class="navbar navbar-expand-lg bg-dark p-3 navbar-dark">
     <div class="container-fluid">
     </div>
@@ -7,11 +7,12 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">@if(session('gameCreated'))
-<div class="alert alert-success text-center">
-    {{ session('gameCreated') }}
-</div>
-@endif
+        <div class="col-md-8">
+            @if(session('gameCreated'))
+                <div class="alert alert-success text-center">
+                {{ session('gameCreated') }}
+                    </div>
+                @endif
     </div>
     </div>
 </div>

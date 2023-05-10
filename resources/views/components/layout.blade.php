@@ -26,7 +26,7 @@
 
 <x-navbar />
 
-<x-header header="{{ $header }}"/>
+
 
 
 <div class="min-vh-100">

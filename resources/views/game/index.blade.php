@@ -1,4 +1,5 @@
-<x-layout header="Tutti i videogame inseriti">
+<x-layout >
+    <x-header header="Tutti i videogame inseriti"></x-header>
 
     <nav class="navbar navbar-expand-lg bg-dark p-3 navbar-dark ">
         <div class="container-fluid ">

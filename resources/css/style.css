@@ -1,8 +1,16 @@
 :root{
     font-family: 'roboto', arial, helvetica;
 }
+body{
+background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
+}
+body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.navbar):not(i):not(p):not(a) {
+    color: darkred;
+}
 .bg-teal{
-    background-color: rgb(16, 114, 167) ;
+    background-color: rgb(31,107,130) ;
 }
 
 .customCard{
@@ -41,4 +49,14 @@
     -moz-border-radius: 20%;
     -ms-border-radius: 20%;
     -o-border-radius: 20%;
+}
+.copyright{
+    color: rgb(31,107,130);
+}
+
+p{
+    color: rgb(31,107,130);
+}
+label{
+    color: rgb(31,107,130);
 }

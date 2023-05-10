@@ -1,4 +1,5 @@
 <x-layout header="Chi siamo">
+    <x-header header="Chi Siamo"></x-header>
     <nav class="navbar navbar-expand-lg bg-dark p-3 navbar-dark">
         <div class="container-fluid">
         </div>

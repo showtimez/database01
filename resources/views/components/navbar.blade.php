@@ -7,33 +7,54 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
+            <a class="nav-link @if(Route::is('homepage')) active fw-bold @endif"  href="{{ route('homepage') }}">Home</a>
+          </li>
+          @auth
+          <li class="nav-item">
+            <a class="nav-link @if(Route::is('game.create')) active fw-bold @endif"  href="{{ route('game.create') }}">Game DB add</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('game.create') }}">Game DB add</a>
+            <a class="nav-link @if(Route::is('console.create')) active fw-bold @endif"  href="{{ route('console.create') }}">Console DB add</a>
           </li>
+          @endauth
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('game.index') }}">Games DataBase</a>
+            <a class="nav-link @if(Route::is('game.index')) active fw-bold @endif"  href="{{ route('game.index') }}">Games DataBase</a>
           </li>
+          {{-- <li class="nav-item">
+            <a class="nav-link @if(Route::is('game.indexSlider')) active fw-bold @endif"  href="{{ route('game.indexSlider') }}">Games DataBase Slider</a>
+          </li> --}}
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('game.indexSlider') }}">Games DataBase Slider</a>
+            <a class="nav-link" href="{{ route('console.index') }}">Console DataBase</a>
           </li>
           <li class="nav-item">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('chi-siamo.contacts') }}">Contacts</a>
+                <a class="nav-link @if(Route::is('chi-siamo.contacts')) active fw-bold @endif"  href="{{ route('chi-siamo.contacts') }}">Contacts</a>
               </li>
               <li class="nav-item">
-            <a class="nav-link" href="{{ route('chi-siamo.index') }}">About us</a>
+            <a class="nav-link @if(Route::is('chi-siamo.index')) active fw-bold @endif"  href="{{ route('chi-siamo.index') }} ">About us</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+          @auth
+
+            <li class="nav-item dropdown px-5 mx-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Bentornat* {{ Auth::user()->name }}
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('login') }}">Profilo</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+                    <form id="form-logout" method="POST" action="{{ route('logout') }}" class="d-none">@csrf</form>
+                    @else
+                    <li class="nav-item dropdown px-5 mx-5">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Benvenut* Ospite
+                          </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                        <li><hr class="dropdown-divider"></li>
+            @endauth
             </ul>
           </li>
         </ul>
