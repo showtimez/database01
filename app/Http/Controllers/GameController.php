@@ -29,4 +29,5 @@ class GameController extends Controller
     $games = Game::all();
 return view('game.indexSlider', compact('games'));
  }
+
 }

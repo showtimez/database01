@@ -42,6 +42,8 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('login') }}">Profilo</a></li>
                     <li><hr class="dropdown-divider"></li>
+                    {{-- <li><a class="dropdown-item" href="{{ route('password.update') }}">Reset password</a></li>
+                    <li><hr class="dropdown-divider"></li> --}}
                     <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                     <form id="form-logout" method="POST" action="{{ route('logout') }}" class="d-none">@csrf</form>
                     @else

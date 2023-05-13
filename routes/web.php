@@ -33,3 +33,4 @@ Route::get('/console/index', [ConsoleController::class, 'index'])->name('console
 Route::get('/console/create', [ConsoleController::class, 'create'])->name('console.create');
 Route::post('console/store', [ConsoleController::class, 'store'])->name('console.store');
 Route::get('/console/show/{console}', [ConsoleController::class, 'show'])->name('console.show');
+Route::get('/console/edit/{console}', [ConsoleController::class, 'edit'])->name('console.edit');

@@ -52,7 +52,7 @@ class ConsoleController extends Controller
      */
     public function edit(Console $console)
     {
-        //
+        return view('console.edit', compact('console'));
     }
 
     /**
@@ -68,6 +68,11 @@ class ConsoleController extends Controller
      */
     public function destroy(Console $console)
     {
-        //
+        // Elimina il file dal database
+        $console->delete();
+
+        // Reindirizza l'utente alla pagina precedente con un messaggio di successo
+        return redirect()->back()->with('success', 'File eliminato con successo');
     }
+
 }
