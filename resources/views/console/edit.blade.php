@@ -10,8 +10,10 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
             {{-- form --}}
-            <form action="" method="POST" class="p-5 shadow" enctype="multipart/form-data">
-
+            <form action="{{ route('console.update', compact('console'))}}" method="POST" class="p-5 shadow" enctype="multipart/form-data">
+                @csrf
+                @method('put')
+                
                 {{-- inserire errore session --}}
                 @if (count($errors) > 0)
                 <div class = "alert alert-danger">
@@ -22,8 +24,7 @@
                     </ul>
                 </div>
                 @endif
-
-                @csrf
+                
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome della console <span class="text-danger small">*</span></label>
@@ -50,7 +51,7 @@
                     </textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Modifica la tua console</button>
+                <button type="submit"  class="btn btn-primary">Modifica la tua console</button>
                 <a href="{{ route('console.index') }}" type="submit" class="btn btn-outline-warning">Torna indietro</a>
             </form>
         </div>

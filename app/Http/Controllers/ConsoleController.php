@@ -32,11 +32,15 @@ class ConsoleController extends Controller
         $console = Console::create([
             'name' => $request->name,
             'brand' => $request->brand,
-            'logo' => $request->file('logo')->store('public/logos'),
-            'description' => $request->description
+            'description' => $request->description,
 
             ]);
-            return redirect(route('console.index'))->with('consoleCreated', 'Hai creato con successo la tua console');
+            if($request->logo){
+                $console->update([
+                    'logo'=>$request->file('logo')->store('public/logos'),
+                ]);
+            }
+                return redirect(route('console.index'))->with('consoleCreated', 'Hai creato con successo la tua console');
     }
 
     /**
@@ -60,7 +64,18 @@ class ConsoleController extends Controller
      */
     public function update(Request $request, Console $console)
     {
-        //
+        $console->update([
+            'name'=>$request->name,
+            'brand'=>$request->brand,
+            'description'=>$request->description
+
+        ]);
+        if($request->logo){
+            $console->update([
+                'logo'=>$request->file('logo')->store('public/logos'),
+            ]);
+        }
+        return redirect(route('console.index'))->with('consoleUpdated', 'Hai modificato correttamente la console');
     }
 
     /**
@@ -71,8 +86,8 @@ class ConsoleController extends Controller
         // Elimina il file dal database
         $console->delete();
 
-        // Reindirizza l'utente alla pagina precedente con un messaggio di successo
-        return redirect()->back()->with('success', 'File eliminato con successo');
+        
+        return redirect(route('console.index'))->with('consoleDeleted', 'Console eliminata con successo');
     }
 
 }

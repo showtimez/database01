@@ -21,7 +21,7 @@ use App\Http\Controllers\PartnerController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 // game controller
 Route::get('/game/create', [GameController::class, 'create'])->name('game.create');
-Route::post('game/store', [GameController::class, 'store'])->name('game.store');
+Route::post('/game/store', [GameController::class, 'store'])->name('game.store');
 Route::get('/game/index', [GameController::class, 'index'])->name('game.index');
 Route::get('/game/indexSlider', [GameController::class, 'indexSlider'])->name('game.indexSlider');
 
@@ -31,6 +31,8 @@ Route::post('/chi-siamo/contacts/save', [ContactController::class, 'save'])->nam
 
 Route::get('/console/index', [ConsoleController::class, 'index'])->name('console.index');
 Route::get('/console/create', [ConsoleController::class, 'create'])->name('console.create');
-Route::post('console/store', [ConsoleController::class, 'store'])->name('console.store');
+Route::post('/console/store', [ConsoleController::class, 'store'])->name('console.store');
 Route::get('/console/show/{console}', [ConsoleController::class, 'show'])->name('console.show');
 Route::get('/console/edit/{console}', [ConsoleController::class, 'edit'])->name('console.edit');
+Route::put('/console/update/{console}', [ConsoleController::class, 'update'])->name('console.update');
+Route::delete('/console/destroy/{console}', [ConsoleController::class, 'destroy'])->name('console.destroy');
