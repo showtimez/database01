@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Console;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ConsoleController extends Controller
 {
@@ -67,7 +68,8 @@ class ConsoleController extends Controller
         $console->update([
             'name'=>$request->name,
             'brand'=>$request->brand,
-            'description'=>$request->description
+            'description'=>$request->description,
+            'user_id'=> Auth::user()->id
 
         ]);
         if($request->logo){
@@ -86,7 +88,7 @@ class ConsoleController extends Controller
         // Elimina il file dal database
         $console->delete();
 
-        
+
         return redirect(route('console.index'))->with('consoleDeleted', 'Console eliminata con successo');
     }
 

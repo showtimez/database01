@@ -40,7 +40,7 @@
                   Bentornat* {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ route('login') }}">Profilo</a></li>
+                    <li><a class="dropdown-item" href="{{ route('user.profile') }}">Profilo</a></li>
                     <li><hr class="dropdown-divider"></li>
                     {{-- <li><a class="dropdown-item" href="{{ route('password.update') }}">Reset password</a></li>
                     <li><hr class="dropdown-divider"></li> --}}

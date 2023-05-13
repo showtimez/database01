@@ -35,15 +35,25 @@
                     <div class="card-body shadow ">
                         <h5 class="card-title">{{ $console->name }}</h5>
                         <p class="small fst-italic text-muted">{{ $console->brand }}</p>
-                        <p class="card-text">{{ $console->description }}</p>
+
+
+                        <hr>
+                        <p class="small">Creato da: {{ $console->user_id ? $console->user->name : 'Utente Guest' }}</p>
+                        <hr>
+
+
                         <div class="mt-3 d-inline">
                             <a href="{{ route('console.show', compact('console')) }}" class="btn btn-primary">Scopri di più</a>
+
+                            @if ($console->user_id && $console->user->id == Auth::user()->id)
                             <a href="{{ route('console.edit', compact('console')) }}" class="btn btn-primary">Modifica console</a>
                             <form action="{{ route('console.destroy', compact('console'))}}" method="post">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" btn btn-danger>Cancella</button>
+                                @csrf
+                                @method('delete')
+                                <button type="submit" btn btn-danger>Cancella</button>
                             </form>
+                            @endif
+
                         </div>
                     </div>
                 </div>
