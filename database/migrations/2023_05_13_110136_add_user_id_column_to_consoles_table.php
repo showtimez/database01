@@ -26,7 +26,6 @@ return new class extends Migration
         Schema::table('consoles', function (Blueprint $table) {
 
             $table->dropForeign(['user_id']);
-
             $table->dropColumn('user_id');
 
         });
