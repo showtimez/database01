@@ -21,6 +21,7 @@
 @vite(['resources/js/app.js', 'resources/css/app.css'])
 
     <title>Gaming DataBase</title>
+    @livewireStyles
 </head>
 <body>
 
@@ -48,7 +49,7 @@
     AOS.init();
 </script>
 
-
+@livewireScripts
 
 </body>
 </html>
